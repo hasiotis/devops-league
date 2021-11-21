@@ -1,0 +1,15 @@
+# Google Setup
+export GOOGLE_APPLICATION_CREDENTIALS="${HOME}/.config/gcloud/application_default_credentials.json"
+
+# AWS Setup
+export AWS_ACCESS_KEY_ID="AWS_ACCESS_KEY_ID"
+export AWS_SECRET_ACCESS_KEY="AWS_SECRET_ACCESS_KEY"
+export AWS_DEFAULT_REGION="eu-west-1"
+
+# Digital Ocean setup
+export DIGITALOCEAN_TOKEN="DIGITALOCEAN_TOKEN"
+export DO_API_TOKEN=${DIGITALOCEAN_TOKEN}
+
+# Linode Setup
+export LINODE_TOKEN="LINODE_TOKEN"
+export LINODE_ACCESS_TOKEN=${LINODE_TOKEN}

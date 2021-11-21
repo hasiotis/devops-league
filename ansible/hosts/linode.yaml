@@ -1,0 +1,13 @@
+plugin: community.general.linode
+ip_style: api
+keyed_groups:
+  - key: tags
+    separator: ''
+tags:
+ - demo
+ - alpha
+ - beta
+ - charlie
+ - delta
+compose:
+  ansible_host: label

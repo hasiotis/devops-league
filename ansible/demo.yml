@@ -1,0 +1,7 @@
+---
+- hosts: demo
+  user: sre
+  become: yes
+  tasks:
+  - name: Update the motd file
+    copy: content="Ansible Setup" dest=/etc/motd owner=root group=root mode=0644

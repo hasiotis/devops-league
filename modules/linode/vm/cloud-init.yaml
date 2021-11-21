@@ -1,0 +1,11 @@
+#cloud-config
+hostname: ${hostname}
+fqdn: ${hostname}.demo.hasiotis.dev
+
+users:
+  - name: sre
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ${publickey}

@@ -1,0 +1,18 @@
+---
+- hosts: alpha:&webservers
+  user: sre
+  become: yes
+  vars:
+    message: "I am an alpha web server"
+  tasks:
+  - name: Update the motd file
+    copy: content="{{ message }}" dest=/etc/motd owner=root group=root mode=0644
+
+- hosts: alpha:&workers
+  user: sre
+  become: yes
+  vars:
+    message: "I am an alpha worker"
+  tasks:
+  - name: Update the motd file
+    copy: content="{{ message }}" dest=/etc/motd owner=root group=root mode=0644

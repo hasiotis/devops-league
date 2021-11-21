@@ -1,0 +1,17 @@
+plugin: aws_ec2
+regions:
+  - eu-west-1
+keyed_groups:
+  - key: tags.AnsibleEnvironment
+    separator: ""
+  - key: tags.AnsibleGroup
+    separator: ""
+filters:
+  tag:AnsibleEnvironment:
+    - demo
+    - alpha
+    - beta
+hostnames:
+  - tag:Name
+compose:
+  ansible_host: tags.Name

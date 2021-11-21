@@ -1,0 +1,20 @@
+plugin: gcp_compute
+zones:
+  - europe-west1-b
+projects:
+  - infra-hasiotis
+scopes:
+  - 'https://www.googleapis.com/auth/cloud-platform'
+  - 'https://www.googleapis.com/auth/compute.readonly'
+auth_kind: application
+keyed_groups:
+  - prefix: ''
+    separator: ''
+    key: labels.ansible_env
+  - prefix: ''
+    separator: ''
+    key: labels.ansible_group
+hostnames:
+  - name
+compose:
+  ansible_host: hostname

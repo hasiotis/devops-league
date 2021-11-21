@@ -1,0 +1,7 @@
+#cloud-config
+hostname: ${hostname}
+fqdn: ${hostname}.demo.hasiotis.dev
+
+system_info:
+  default_user:
+    name: sre
